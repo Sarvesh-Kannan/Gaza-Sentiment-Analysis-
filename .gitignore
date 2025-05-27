@@ -36,8 +36,4 @@ ENV/
 gaza_reddit_sentiment_analysis_report.html
 
 # Jupyter Notebook
-.ipynb_checkpoints
-
-# Large files
-# Uncomment if you don't want to include the data file
-# reddit_posts.json 
+.ipynb_checkpoints 
