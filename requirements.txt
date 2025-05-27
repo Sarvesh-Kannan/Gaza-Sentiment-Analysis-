@@ -1,0 +1,16 @@
+pandas
+numpy
+matplotlib
+seaborn
+nltk
+scikit-learn
+transformers
+spacy
+wordcloud
+lime
+shap
+plotly
+torch>=2.0.0
+tqdm
+torchvision
+tensorboard 
