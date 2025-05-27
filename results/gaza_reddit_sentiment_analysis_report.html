@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gaza-Related Reddit Posts Sentiment Analysis</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        h1, h2, h3 { color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .stats { background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        .visualization { margin: 30px 0; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis of Gaza-Related Reddit Posts</h1>
+        
+        <div class="stats">
+            <h2>Dataset Statistics</h2>
+            <p>Total posts analyzed: 4997</p>
+            <p>Average text length: 350.14 characters</p>
+            <p>Average word count: 53.56 words</p>
+            <p>Computing device: CPU</p>
+        </div>
+        
+        <div class="visualization">
+            <h2>Sentiment Distribution</h2>
+            <p>The sentiment distribution among the analyzed posts:</p>
+            <ul>
+                <li>neutral: 448 posts (44.80%)</li>
+                <li>negative: 443 posts (44.30%)</li>
+                <li>positive: 109 posts (10.90%)</li>
+
+            </ul>
+            <img src="sentiment_distribution.png" alt="Sentiment Distribution" style="max-width: 100%;">
+        </div>
+        
+        <div class="visualization">
+            <h2>Word Cloud</h2>
+            <p>Most frequent words in the posts:</p>
+            <img src="wordcloud.png" alt="Word Cloud" style="max-width: 100%;">
+        </div>
+        
+        <div class="visualization">
+            <h2>Topic Analysis</h2>
+            <p>Top topics identified in the posts:</p>
+            <table>
+                <tr>
+                    <th>Topic</th>
+                    <th>Top Keywords</th>
+                </tr>
+
+                <tr>
+                    <td>Topic 1</td>
+                    <td>people, like, get, know, want, im, would, think, thing, dont</td>
+                </tr>
+
+                <tr>
+                    <td>Topic 2</td>
+                    <td>israel, gaza, war, aid, hamas, israeli, say, humanitarian, solution, palestine</td>
+                </tr>
+
+                <tr>
+                    <td>Topic 3</td>
+                    <td>palestinian, israel, israeli, state, gaza, people, would, war, one, violence</td>
+                </tr>
+
+                <tr>
+                    <td>Topic 4</td>
+                    <td>bd, hamas, ban, team, bmtbarons, idf, match, top, gaza, hmtherald</td>
+                </tr>
+
+                <tr>
+                    <td>Topic 5</td>
+                    <td>gaza, israeli, strip, idf, blockade, force, divorce, said, talk, ceasefire</td>
+                </tr>
+
+            </table>
+        </div>
+        
+        <div class="visualization">
+            <h2>Named Entity Recognition</h2>
+            <p>Most common named entities mentioned in the posts:</p>
+            <table>
+                <tr>
+                    <th>Entity</th>
+                    <th>Type</th>
+                    <th>Count</th>
+                </tr>
+
+                <tr>
+                    <td>Israel</td>
+                    <td>GPE</td>
+                    <td>61</td>
+                </tr>
+
+                <tr>
+                    <td>Gaza</td>
+                    <td>GPE</td>
+                    <td>38</td>
+                </tr>
+
+                <tr>
+                    <td>Israeli</td>
+                    <td>NORP</td>
+                    <td>34</td>
+                </tr>
+
+                <tr>
+                    <td>Hamas</td>
+                    <td>ORG</td>
+                    <td>26</td>
+                </tr>
+
+                <tr>
+                    <td>Palestinian</td>
+                    <td>NORP</td>
+                    <td>21</td>
+                </tr>
+
+                <tr>
+                    <td>Palestinians</td>
+                    <td>NORP</td>
+                    <td>14</td>
+                </tr>
+
+                <tr>
+                    <td>Zionism</td>
+                    <td>NORP</td>
+                    <td>12</td>
+                </tr>
+
+                <tr>
+                    <td>two</td>
+                    <td>CARDINAL</td>
+                    <td>10</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>CARDINAL</td>
+                    <td>10</td>
+                </tr>
+
+                <tr>
+                    <td>US</td>
+                    <td>GPE</td>
+                    <td>9</td>
+                </tr>
+
+                <tr>
+                    <td>one</td>
+                    <td>CARDINAL</td>
+                    <td>9</td>
+                </tr>
+
+                <tr>
+                    <td>Palestine</td>
+                    <td>GPE</td>
+                    <td>7</td>
+                </tr>
+
+                <tr>
+                    <td>Jews</td>
+                    <td>NORP</td>
+                    <td>7</td>
+                </tr>
+
+                <tr>
+                    <td>BDS</td>
+                    <td>ORG</td>
+                    <td>7</td>
+                </tr>
+
+                <tr>
+                    <td>UNRWA</td>
+                    <td>ORG</td>
+                    <td>6</td>
+                </tr>
+
+            </table>
+
+            <img src="entity_types.png" alt="Entity Type Distribution" style="max-width: 100%;">
+
+        </div>
+        
+        <div class="visualization">
+            <h2>Sentiment vs. Word Count</h2>
+            <p>Relationship between post length and sentiment:</p>
+            <img src="sentiment_vs_wordcount.png" alt="Sentiment vs. Word Count" style="max-width: 100%;">
+        </div>
+        
+        <div class="visualization">
+            <h2>Explainable AI Results</h2>
+            <p>Understanding what words and phrases are influencing the sentiment classification:</p>
+
+            <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px;">
+                <h3>Example Post 1</h3>
+                <p><strong>Text:</strong> Israeli official says government cannot confirm babies were beheaded in Hamas attack</p>
+                <p><strong>Prediction:</strong> negative/neutral</p>
+                <p><strong>Key factors influencing this prediction:</strong></p>
+                <ul>
+
+                    <li style="color: red;">hamas: -0.0831</li>
+
+                    <li style="color: red;">baby: -0.0813</li>
+
+                    <li style="color: red;">official: -0.0625</li>
+
+                    <li style="color: red;">government: -0.0555</li>
+
+                    <li style="color: red;">israeli: -0.0529</li>
+
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px;">
+                <h3>Example Post 2</h3>
+                <p><strong>Text:</strong> Why has Daryl always resisted romantic relationships?</p>
+                <p><strong>Prediction:</strong> negative/neutral</p>
+                <p><strong>Key factors influencing this prediction:</strong></p>
+                <ul>
+
+                    <li style="color: red;">always: -0.1275</li>
+
+                    <li style="color: red;">relationship: -0.0892</li>
+
+                    <li style="color: red;">romantic: -0.0004</li>
+
+                    <li style="color: red;">resisted: -0.0004</li>
+
+                    <li style="color: red;">daryl: -0.0003</li>
+
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px;">
+                <h3>Example Post 3</h3>
+                <p><strong>Text:</strong> My two state solution for after the election </p>
+                <p><strong>Prediction:</strong> negative/neutral</p>
+                <p><strong>Key factors influencing this prediction:</strong></p>
+                <ul>
+
+                    <li style="color: green;">state: 0.1452</li>
+
+                    <li style="color: red;">solution: -0.0304</li>
+
+                    <li style="color: red;">election: -0.0068</li>
+
+                    <li style="color: red;">two: -0.0045</li>
+
+                </ul>
+            </div>
+
+        </div>
+        
+        <div class="visualization">
+            <h2>Conclusion</h2>
+            <p>This analysis provides insights into the sentiment patterns, key topics, and important entities mentioned in Reddit posts related to the Gaza issue. The visualizations and explainable AI components help understand the factors driving sentiment in these discussions.</p>
+        </div>
+    </div>
+</body>
+</html>

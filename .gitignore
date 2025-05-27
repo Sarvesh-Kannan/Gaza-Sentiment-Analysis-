@@ -31,9 +31,5 @@ ENV/
 *.swp
 *.swo
 
-# Project specific
-*.png
-gaza_reddit_sentiment_analysis_report.html
-
 # Jupyter Notebook
 .ipynb_checkpoints 
